@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  each item in results
+    h2 #{item.title}
+
+    div #{item.text}
+        p #{item.author}

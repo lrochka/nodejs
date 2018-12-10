@@ -1,7 +1,9 @@
 const mysql = require('mysql');
 
 //local mysql db connection
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
+	multipleStatements: true,
+	connectionLimit: 10,
     host     : 'zanner.org.ua',
     port	: 33321,
     user     : 'root',

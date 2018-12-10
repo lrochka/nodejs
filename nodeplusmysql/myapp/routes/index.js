@@ -3,9 +3,10 @@ var router = express.Router();
 var connection  = require('../db.js');
 /* GET home page. */
 router.get('/', function(req, res, next) {
+    console.log("Some fucking text before");
     connection.query('SELECT * FROM news ORDER BY id DESC', function (error, results, fields) {
 	  if (error) throw error;
-	  console.log("Some fucking text");
+	  console.log("Some fucking text after");
 	  // connected!
 	  res.render('index', { 
 	  	title: 'Express',

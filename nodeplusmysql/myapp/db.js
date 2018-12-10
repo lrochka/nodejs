@@ -2,11 +2,11 @@ const mysql = require('mysql');
 
 //local mysql db connection
 const connection = mysql.createConnection({
-    host     : 'zanner.org.ua',
-    port	: 33321,
-    user     : 'root',
-    password : '20161212',
-    database : 'world_x'
+    host     : 'sql12.freemysqlhosting.net',
+    port	: 3306,
+    user     : 'sql12269468',
+    password : 'wKgefULmLb',
+    database : 'sql12269468'
 });
 
 connection.connect(function(err) {

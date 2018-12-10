@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var connection  = require('../db');
+var connection  = require('../db.js');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     connection.query('SELECT * FROM news ORDER BY id DESC', function (error, results, fields) {

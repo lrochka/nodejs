@@ -3,8 +3,10 @@ const app = express()
 var mysql = require('mysql');
 var pool = mysql.createPool({
   host: "zanner.org.ua",
+  port: "33321",
   user: "user",
-  password: "123456789"
+  password: "123456789",
+  database: "world_x"
 });
 
 exports.connection = {

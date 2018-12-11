@@ -44,7 +44,9 @@ exports.connection = {
 };
 
 app.get('/', function(req, res) {
+  console.log("before exports");
     exports.connection.query('SELECT * FROM countryinfo;', function(error, results, fields) {
+      console.log("inside exports");
       if (error) throw error
 
   // results is an array with one element for every statement in the query:

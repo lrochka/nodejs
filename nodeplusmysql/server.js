@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
+var mysql = require('mysql');
 
 app.get('/', function(req, res) {
+    
     res.sendfile('./index.html');
 })
 

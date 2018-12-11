@@ -8,7 +8,8 @@ var con = mysql.createConnection({
   password: "123456789"
 });
 
-app.use(con.connect(function(err) {
+app.use(
+  con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
 });

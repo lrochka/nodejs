@@ -41,11 +41,6 @@ exports.connection = {
     }
 };
 
-exports.connection.getConnection(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-});
-
 app.get('/', function(req, res) {
     
     res.sendfile('./index.html');

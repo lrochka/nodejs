@@ -42,7 +42,15 @@ exports.connection = {
 };
 
 app.get('/', function(req, res) {
-    
+    exports.connection.query('SELECT * FROM countryinfo;', function(error, results, fields) {
+      if (error) throw error
+
+  // results is an array with one element for every statement in the query:
+    // console.log(results);
+      // console.log(results[0]); // [{1: 1}]
+     console.log(results); // [{2: 2}]
+    });
+  
     res.sendfile('./index.html');
 })
 

@@ -1,9 +1,8 @@
 const express = require('express')
 const app = express()
 
-app.get('/', function (req, res) {
-  
-  res.send("index.html")
+app.get('/', function(req, res) {
+    res.sendfile('./index.html');
 })
 
 app.listen(process.env.PORT, function () {
